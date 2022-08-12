@@ -1,0 +1,56 @@
+module.exports = {
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  extends: [
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+  ],
+  rules: {
+    "func-names": 0,
+    "no-plusplus": 0,
+    "no-console": 0,
+    indent: "off",
+    "no-underscore-dangle": 0,
+    camelcase: "off",
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "no-param-reassign": 0,
+    "consistent-return": "off",
+    "default-param-last": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "linebreak-style": 0,
+    "import/prefer-default-export": 0,
+    "import/extensions": 0,
+    "import/no-unresolved": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/order": ["error", { warnOnUnassignedImports: true }],
+    "no-use-before-define": 0,
+    "react/react-in-jsx-scope": 0,
+    "no-shadow": 0,
+    "react/function-component-definition": [
+      2,
+      {
+        namedComponents: "arrow-function",
+      },
+    ],
+    "react/prop-types": 0,
+    "react/jsx-filename-extension": [
+      2,
+      { extensions: [".js", ".jsx", ".ts", ".tsx"] },
+    ],
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+  },
+  settings: {
+    "import/resolver": {
+      node: {
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+      },
+    },
+  },
+};
